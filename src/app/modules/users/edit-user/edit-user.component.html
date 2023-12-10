@@ -1,1 +1,43 @@
-<p>edit-user works!</p>
+<div class="d-flex border ">
+    <div style="height: 89vh;width: 180px;" class="sidebar bg-danger text-light mt-2 ms-2 rounded p-3 d-flex flex-column">
+        <a style="text-decoration: none;margin-top: 10px; font-weight: bold;color: white;" routerLink="/dashboard">Home</a>
+        <a style="text-decoration: none;margin-top: 10px; font-weight: bold;color: white;" routerLink="/users">Users</a>
+    
+    </div>
+    <div class="dasboard d-flex justify-content-center align-items-center flex-column p-3 w-100">
+        <div class="text-center"> <h1>Update User Details !!!</h1>
+        </div>
+        <div class="user-details mt-5 shadow border mx-auto  rounded p-3 w-50">
+            <form >
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="floatingInputId" placeholder="User Id"  type="text">
+                    <label for="floatingInputId">User Id</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="floatingInputName" placeholder="User Name"  type="text">
+                    <label for="floatingInputName">User Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="floatingInputMail" placeholder="name@example.com"  type="text">
+                    <label for="floatingInputMail">Email</label>
+                </div>
+    
+                <!-- dropdown -->
+                <div class="form-floating mb-5">
+                  <select class="form-control" id="floatingInputStatus">
+                    <option value="1">Active</option>
+                    <option value="0">Inactive</option>
+                  </select>
+                  <label for="floatingInputStatus">Status</label>
+                </div>
+                <div class="mb-3 d-flex justify-content-between px-3 ">
+                    <button class="btn btn-dark">Cancel</button>
+                    <button class="btn btn-danger ms-5">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   
+    
+</div>
