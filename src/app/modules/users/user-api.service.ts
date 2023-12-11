@@ -29,4 +29,20 @@ export class UserApiService {
   deleteUserAPI(id:string){
     return this.http.delete(`${this.SERVER_URL}/users/${id}`)
   }
+
+
+  // view user
+
+  viewUserAPI(id:any){
+    return this.http.get(`${this.SERVER_URL}/users/${id}`)
+
+  }
+
+  // update user api
+
+  updateUserAPI(id:any,user:UserModel){
+      return this.http.put(`${this.SERVER_URL}/users/${id}`,user)
+  }
+
+  
 }
