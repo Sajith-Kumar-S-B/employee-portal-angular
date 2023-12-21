@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserModel } from '../users.model';
 import { UserApiService } from '../user-api.service';
 import { Router } from '@angular/router';
+import { ToasterService } from 'src/app/services/toastr.service';
 
 @Component({
   selector: 'app-add-user',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AddUserComponent{
    user:UserModel = {}
-  constructor(private api:UserApiService,private router:Router){}
+  constructor(private api:UserApiService,private router:Router,private toaster:ToasterService){}
  
 
    addUser(){
@@ -18,11 +19,11 @@ export class AddUserComponent{
   this.api.addUserAPI(this.user).subscribe({
     next:(res:UserModel)=>{
       console.log(res);
-      alert("New User Added Success")
+      this.toaster.showSuccess("New User Added Success")
       this.router.navigateByUrl("/users")
     },
     error:(err:any)=>{
-      alert(err.message)
+      this.toaster.showError(err.message)
     }
   })
    

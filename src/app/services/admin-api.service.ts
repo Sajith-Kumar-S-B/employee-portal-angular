@@ -15,4 +15,8 @@ export class AdminApiService {
 
     return this.http.get(`${this.SERVER_URL}/users/1`)
   }
+
+  updateAdmin(admin:any){
+     return  this.http.put(`${this.SERVER_URL}/users/1`,admin)
+  }
 }
